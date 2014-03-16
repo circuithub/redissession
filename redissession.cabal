@@ -1,5 +1,5 @@
 name: redissession
-version: 0.0.0
+version: 0.0.0.1
 license: BSD3
 license-file: LICENSE
 author: Tom Streller
@@ -7,7 +7,7 @@ maintainer: Tom Streller
 synopsis: Redis-Powered Sessions for Haskell
 category: Database
 stability: experimental
-cabal-version: >= 1.6
+cabal-version: >= 1.18
 build-type: Simple
 homepage: https://github.com/scan/redissession
 source-repository head
@@ -15,5 +15,19 @@ source-repository head
   location: https://scan@github.com/scan/redissession.git
 
 library
-  build-depends: base >= 4 && < 5, mtl, time, bytestring >= 0.9, text, redis >= 0.12, cookie, binary, pool-conduit, entropy, pureMD5, yesod-core >= 1.0.0.20120329, wai
-  exposed-modules: Web.RedisSession, Yesod.Session.Redis
+  build-depends:  base                >= 4        &&  < 5
+                , mtl                 >= 2.1.2    &&  < 2.2
+                , time                >= 1.4.0.1  &&  < 1.5
+                , bytestring          >= 0.9      &&  < 0.11
+                , text                >= 0.11.3.1 &&  < 0.12
+                , redis               >= 0.13
+                , cookie              >= 0.4.0.1  &&  < 0.5
+                , binary              >= 0.7.1    &&  < 0.8
+                , pool-conduit        >= 0.1.2.1  &&  < 0.2
+                , entropy             >= 0.2.2.4  &&  < 0.3
+                , pureMD5
+                , yesod-core          >= 1.2.7    &&  < 1.3
+                , wai                 >= 2.1.0    &&  < 2.2
+
+  exposed-modules:  Web.RedisSession
+                  , Yesod.Session.Redis
