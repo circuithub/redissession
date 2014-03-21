@@ -15,12 +15,14 @@ source-repository head
   location: https://scan@github.com/scan/redissession.git
 
 library
+  default-language: Haskell2010
   build-depends:  base                >= 4        &&  < 5
                 , mtl                 >= 2.1.2    &&  < 2.2
                 , time                >= 1.4.0.1  &&  < 1.5
                 , bytestring          >= 0.9      &&  < 0.11
                 , text                >= 0.11.3.1 &&  < 0.12
-                , redis               >= 0.13
+                , containers          >= 0.5.0    &&  < 0.6
+                , hedis               >= 0.6.5    &&  < 0.7
                 , cookie              >= 0.4.0.1  &&  < 0.5
                 , binary              >= 0.7.1    &&  < 0.8
                 , pool-conduit        >= 0.1.2.1  &&  < 0.2
