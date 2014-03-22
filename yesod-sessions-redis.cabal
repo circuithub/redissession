@@ -1,18 +1,18 @@
-name: redissession
-version: 0.0.0.1
+name: yesod-sessions-redis
+version: 0.1.0.1
 license: BSD3
 license-file: LICENSE
-author: Tom Streller
-maintainer: Tom Streller
+author: Oliver Hunt
+maintainer: Oliver Hunt
 synopsis: Redis-Powered Sessions for Haskell
 category: Database
 stability: experimental
 cabal-version: >= 1.18
 build-type: Simple
-homepage: https://github.com/scan/redissession
+homepage: https://github.com/ollieh/yesod-sessions-redis
 source-repository head
   type: git
-  location: https://scan@github.com/scan/redissession.git
+  location: https://ollieh@github.com/ollieh/yesod-sessions-redis.git
 
 library
   build-depends:  base                >= 4        &&  < 5
